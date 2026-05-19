@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <clipPath id="circleClip">
+      <circle cx="100" cy="100" r="95"/>
+    </clipPath>
+  </defs>
+  
+  <!-- Navy blue background circle -->
+  <circle cx="100" cy="100" r="100" fill="#1e40af"/>
+  
+  <!-- Border circle -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#1e3a8a" stroke-width="2"/>
+  
+  <!-- Clipped image -->
+  <image x="0" y="0" width="200" height="200" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cimage href='/logo-glasses2.jpeg' x='0' y='0' width='200' height='200'/%3E%3C/svg%3E" clip-path="url(%23circleClip)" opacity="0.7"/>
+  
+  <!-- EYEMAX Text - Center -->
+  <text x="100" y="110" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle" font-family="Arial, sans-serif" letter-spacing="1.5">EYEMAX</text>
+</svg>

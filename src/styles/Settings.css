@@ -1,0 +1,24 @@
+.settings-form {
+  max-width: 980px;
+}
+
+.settings-input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.settings-input-icon > svg {
+  position: absolute;
+  left: 12px;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.settings-input-with-icon {
+  padding-left: 40px;
+}
+
+.settings-map-textarea {
+  min-height: 84px;
+}

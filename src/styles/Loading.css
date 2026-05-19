@@ -1,0 +1,124 @@
+@import './theme.css';
+
+/* ===== LOADING SPINNER ===== */
+.loading-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.loading-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* ── Spinner Animation ── */
+.spinner {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.spinner-ring {
+  box-sizing: border-box;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  margin: 0;
+  border: 3px solid var(--border);
+  border-radius: 50%;
+  animation: spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+
+.spinner-ring:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.spinner-ring:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.spinner-ring:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    border-color: var(--border);
+  }
+  25% {
+    border-color: var(--primary);
+  }
+  50% {
+    transform: rotate(180deg);
+    border-color: var(--primary);
+  }
+  75% {
+    border-color: var(--border);
+  }
+  100% {
+    transform: rotate(360deg);
+    border-color: var(--border);
+  }
+}
+
+/* ── Loading Text ── */
+.loading-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.loading-subtext {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ── Pulsing Animation Alternative ── */
+.loading-text {
+  animation: pulse-text 2s ease-in-out infinite;
+}
+
+@keyframes pulse-text {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .spinner {
+    width: 60px;
+    height: 60px;
+  }
+
+  .spinner-ring {
+    width: 60px;
+    height: 60px;
+    border-width: 2px;
+  }
+
+  .loading-text {
+    font-size: 18px;
+  }
+
+  .loading-subtext {
+    font-size: 12px;
+  }
+}

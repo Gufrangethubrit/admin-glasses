@@ -1,0 +1,49 @@
+/* ===== GLOBAL ADMIN THEME (Design System Tokens) ===== */
+:root {
+  /* Background Colors */
+  --bg-main:        #0F1115;
+  --bg-secondary:   #151821;
+  --bg-card:        #1C1F2A;
+  --bg-hover:       #252836;
+  --border:         #2E3345;
+
+  /* Text Colors */
+  --text-primary:   #FFFFFF;
+  --text-secondary: #B6BAC8;
+  --text-muted:     #7A8194;
+  --text-disabled:  #4B5060;
+
+  /* Primary Accent Color (aligned with frontend) */
+  --primary:        #1e40af;
+  --primary-hover:  #1e3a8a;
+  --primary-light:  #dbeafe;
+
+  /* Semantic Colors */
+  --success:        #22C55E;
+  --warning:        #F59E0B;
+  --error:          #EF4444;
+  --info:           #38BDF8;
+
+  /* Button Styling */
+  --btn-primary-bg:   var(--primary);
+  --btn-primary-text: #FFFFFF;
+  --btn-secondary-bg: #1F2333;
+  --btn-secondary-text: #FFFFFF;
+
+  /* Other Semantic */
+  --price-color:    #22C55E;
+  --discount-color: #EF4444;
+  --rating-star:    #FBBF24;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
