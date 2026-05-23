@@ -3,7 +3,7 @@ import { IoMailOutline, IoLockClosedOutline, IoEyeOutline, IoEyeOffOutline } fro
 import axios from 'axios'
 import '../styles/Auth.css'
 
-const API = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+const API = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? 'http://localhost:8000' : 'https://backend-glasses-2.onrender.com')
 
 export default function Login() {
   const [email, setEmail]             = useState('')
